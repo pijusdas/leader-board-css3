@@ -2,6 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap');
 
 /* common font styles or utilities */
+.nav{
+    background: #562EFF;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.logo{
+    display: flex;
+    gap: 10px;
+
+}
+.logo img{
+    width: 40px;
+    height: 50px;
+}
+.profile img{
+    height: 50px;
+    width: 50px;
+}
+.idea{
+    color: #FFFFFF;
+   
+}
+.home{
+    color: #FFFFFF;
+}
+.profile{
+    display: flex;
+    gap: 10px;
+   
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     /* font-family: 'Open Sans', sans-serif; */
@@ -101,29 +141,48 @@ main {
 /*  ------------------------
       course styles  
  ------------------------ */
- .courses{
+.courses {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
- }
- .course-info{
+}
+
+
+
+.course-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
- }
+}
 
 .course .course-banner img {
     width: 224px;
     height: 104px;
 }
-.fa-star{
+
+.course-author a {
+    color: #ED6B4F;
+    text-decoration: none;
+}
+
+.fa-star {
     font-size: 12px;
 }
-.fa-star.filled{
+
+.fa-star.filled {
     color: #FFC014;
 }
-.fa-star.unfilled{
-    color:  #AEAEAE;
+
+.fa-star.unfilled {
+    color: #AEAEAE;
+}
+
+.course-douration {
+    color: #FF4A60;
+    background: #FFE4E8;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600px;
 }
 
 /*------------------
@@ -133,30 +192,38 @@ main {
 
 /* Mobile devices */
 @media only screen and (max-width:688px) {
-    .container{
+    .container {
         width: 100%;
     }
-    .players, .blogs, .courses{
-        grid-template-columns: repeat(1,1fr);
+
+    .players,
+    .blogs,
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .player, .blog{
+
+    .player,
+    .blog {
         flex-direction: column;
     }
 }
 
-  /*-----------------
+/*-----------------
    Tablate device
    -------------------- */
-   @media only screen and (min-width:688px) and (max-width:992px) {
-       .container{
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container {
         width: 100%;
-       }
-        .players, .courses{
-            grid-template-columns: repeat(2,1fr);
-            
-        }
-        .blogs{
-            grid-template-columns: repeat(1,1fr);
-            
-        }
-   }
+    }
+
+    .players,
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
